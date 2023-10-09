@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://foo.bar",
-  "title": "SPDX business profiel fields (unstructured) dev-version",
+  "title": "SPDX business profile",
   "type": "object",
   "properties": {
     "title": {
