@@ -22,8 +22,8 @@
           "description": "Set this true, if no export control context is given.",
           "type": "boolean"
         },
-        "AEBquestions": {
-          "description": "Individual queries not covered by any standard field.",
+        "qaQuestions": {
+          "description": "Individual, Q&A style queries not covered by any standard field.",
           "type": "array",
           "items": {
             "title": "exportControlQuestion",
@@ -81,7 +81,11 @@
           "description": "Main purpose of this component."
         },
         "countryOfOrigin": {
-          "type": "string"
+          "type": "array",
+          "description": "country / countries of origin",
+          "items": {
+            "type": "string"
+          }
         },
         "manufacturer": {
           "type": "string"
