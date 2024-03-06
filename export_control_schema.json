@@ -1,17 +1,11 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://foo.bar",
-  "title": "SPDX business profile",
+  "title": "SPDX operations profile",
   "type": "object",
   "properties": {
     "title": {
       "type": "string"
-    },
-    "dataVersion": {
-      "description": "Provide a reference number that can be used to understand how to parse and interpret the rest of the file. It will enable both future changes to the specification and to support backward compatibility.",
-      "type": "string",
-      "pattern": "business-0_0_1",
-      "default": "business-0_0_1"
     },
     "exportControl": {
       "type": "object",
