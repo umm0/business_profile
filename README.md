@@ -9,3 +9,9 @@ To try out and/or visualize the JSON schema, you could use [https://json-editor.
 
 ## license
 This work is licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+
+# Changes
+## Meeting 2024-02-23
+* Move 3.10 (exportControl > classifications)to the top of the list
+* Remove 3.11 (exportControl > comments)
+* Remove 4.1 (otherBusiness > patentInformation)
