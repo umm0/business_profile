@@ -1,22 +1,38 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://foo.bar",
-  "title": "SPDX business profile",
+  "title": "SPDX operations profile",
   "type": "object",
   "properties": {
     "title": {
       "type": "string"
     },
-    "dataVersion": {
-      "description": "Provide a reference number that can be used to understand how to parse and interpret the rest of the file. It will enable both future changes to the specification and to support backward compatibility.",
-      "type": "string",
-      "pattern": "business-0_0_1",
-      "default": "business-0_0_1"
-    },
     "exportControl": {
       "type": "object",
       "description": "This is for export control data.",
       "properties": {
+        "classifications": {
+          "type": "array",
+          "description": "export control classifications.",
+          "items": {
+            "description": "export control classification",
+            "type": "object",
+            "title": "export control classification",
+            "properties": {
+              "classificationSystem": {
+                "description": "referenced export control classification system (e.g. 'ECCN' or 'EAR' for US, 'Ausfuhrlistennummer' for Germany ,...).",
+                "type": "string"
+              },
+              "classificationValue": {
+                "description": "e.g. EAR99 ",
+                "type": "string"
+              },
+              "comment": {
+                "type": "string"
+              }
+            }
+          }
+        },
         "notRequired": {
           "$comment": "This could make sense to have a 'no export control context given' flag to avoid unnecessary parsing of details.",
           "description": "Set this true, if no export control context is given.",
@@ -101,45 +117,6 @@
         },
         "website": {
           "type": "string"
-        },
-          "classifications" : {
-            "type" : "array",
-            "description" : "export control classifications.",
-            "items" : {
-              "description" : "export control classification",
-              "type" : "object",
-              "title" : "export control classification",
-              "properties": {
-                "classificationSystem": {
-                  "description": "referenced export control classification system (e.g. 'ECCN' or 'EAR' for US, 'Ausfuhrlistennummer' for Germany ,...).",
-                  "type": "string"
-                },
-                "classificationValue": {
-                  "description": "e.g. EAR99 ",
-                  "type": "string"
-                },
-                "comment": {
-                  "type": "string"
-                  }
-                }
-            }
-          },
-        "comments": {
-          "type": "array",
-          "description": "comments on export control data",
-          "items": {
-            "description": "entry information.",
-            "type": "object",
-            "properties": {
-              "comment": {
-                "type": "string"
-              },
-              "fieldReference": {
-                "description": "field, the comment relates to (e.g. 'Country of origin')",
-                "type": "string"
-              }
-            }
-          }
         }
       }
     },
@@ -147,30 +124,6 @@
       "type": "object",
       "description": "Other information, that might impact business use.",
       "properties": {
-        "patentInformation": {
-          "description": "Information about applicable patent licensing.",
-          "type": "array",
-          "items": {
-            "type": "object",
-            "description": "patent reference.",
-            "title": "patent reference",
-            "properties": {
-              "SPDXID": {
-                "type": "string",
-                "description": "Reference to the respective element in the SPDX document."
-              },
-              "sourceLink": {
-                "type": "string",
-                "description": "Origin of the information."
-              },
-              "patentText": {
-                "type": "string",
-                "description": "Free text to describe the patent issue.",
-                "format": "textarea"
-              }
-            }
-          }
-        },
         "sourceCodeProvision": {
           "description": "Links for source provision for distribution. Links must be persistent!",
           "type": "array",
@@ -222,7 +175,6 @@
       }
     }
   },
-  "required": [
-  ],
+  "required": [],
   "additionalProperties": false
 }
