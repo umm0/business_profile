@@ -19,3 +19,6 @@ This work is licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4
 ## 2024-03-06 spontaneous cleanup
 * Rename to "SPDX operations profile"
 * Remove "dataVersion" (No value during draft phase. Versioning is done by Git.)
+
+## 2024-04-12
+* Add json schema data from Marcel Kurzmann
