@@ -1,5 +1,16 @@
-# SPDX 3 business profile
-SPDX 3 business profile discussion.
+# SPDX 3 Operations profile
+SPDX 3 Operations profile discussion.
+
+The Operations profile idea came up after the LF Europe in Bilboa – September 2023. 
+
+The proposal aims to add fields relating to operations, like
+* Application facts
+* Deliverable facts
+* Export control
+* Special technology – including AI
+* Country of origin
+* Obligations
+
 
 ## contribution / commenting
 In the JSON schema "$comment" keyword is used for annotations for the purpose of the ongoing discussions. The "$comment" keys and their values will be removed at some point.
@@ -22,3 +33,6 @@ This work is licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4
 
 ## 2024-04-12
 * Add json schema data from Marcel Kurzmann
+
+## 2024-06-17
+* Rename files und update description to fit "SPDX Operations profile"
