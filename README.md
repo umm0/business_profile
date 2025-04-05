@@ -1,3 +1,7 @@
+> [!IMPORTANT] 
+> Archived! - Further work has been moved to the [profile-operations](https://github.com/spdx/spdx-3-model/tree/profile-operations) branch in the https://github.com/spdx/spdx-3-model/ repository.
+
+
 # SPDX 3 Operations profile
 SPDX 3 Operations profile discussion.
 
